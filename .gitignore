@@ -1,0 +1,9 @@
+# SwiftPM
+.build
+.swiftpm
+
+# VSCode IDE
+.vscode
+
+# macOS
+.DS_Store

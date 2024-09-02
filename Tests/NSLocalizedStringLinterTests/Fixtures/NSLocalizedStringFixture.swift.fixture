@@ -1,0 +1,23 @@
+//
+//  NSLocalizedStringFixture.swift
+//  
+
+import Foundation
+
+func demo() {
+  // valid
+  let s1 = NSLocalizedString("key1", bundle: .module, value: "value1", comment: "comment1")
+  // missing
+  let s2 = NSLocalizedString("key2", value: "value2", comment: "comment2")
+  // invalid
+  let s3 = NSLocalizedString("key3", bundle: .main, value: "value3", comment: "comment3")
+  // format
+  let format = NSLocalizedString(
+    #"fmtkey"#,
+    bundle: .module /* look up file in SDK not client app */,
+    value: #"Delete avatar "%1$@"?"#,
+    comment: "Confirmation message before deleting an avatar. The %1$@ placeholder is for the name of the avatar."
+  )
+  let prompt = String(format: format, "Bob")
+}
+
