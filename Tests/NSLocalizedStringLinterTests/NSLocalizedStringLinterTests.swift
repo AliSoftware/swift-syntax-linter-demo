@@ -1,6 +1,9 @@
 import XCTest
 import NSLocalizedStringLinter
 
+// Note: I'd love to use SwiftTesting instead of XCTest but I wrote this toy project while Swift 6 was barely out
+// So SwiftTesting was not available in latest stable Xcode and too new to adopt for me yet. Maybe later.
+
 class NSLocalizedStringLinterTests: XCTestCase {
   let linter = NSLocalizedStringLinter()
 

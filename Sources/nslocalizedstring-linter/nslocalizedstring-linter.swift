@@ -2,6 +2,12 @@ import Foundation
 import NSLocalizedStringLinter
 
 @main struct CLI {
+  // This is the executable entry point
+  //
+  // It parses the command line arguments and calls the `NSLocalizedStringLinter` appropriately
+  //
+  // Note: Maybe one day we should migrate this code to use SwiftArgumentsParser.
+  // For the time being the need was simple enough to make do with directly using `CommandLine.arguments` though.
   static func main() throws {
     guard CommandLine.arguments.count == 2 else {
       print("error: Not enough arguments!")
